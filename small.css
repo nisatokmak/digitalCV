@@ -1,0 +1,41 @@
+@media screen and (max-width: 376px) {
+  .container-body {
+    margin: 0;
+    padding: 0;
+    background-image: url(./images/img-mob.jpg);
+    background-size: cover;
+    width: 100%;
+  }
+  .left-side-nav {
+    margin-left: 13px;
+    margin-right: 0;
+  }
+  .social-media {
+    display: none;
+  }
+
+  .slideshow-container {
+    display: none;
+  }
+
+  .text {
+    margin-left: 20px;
+    margin-top: 110px;
+  }
+
+  .text h1 {
+    color: bisque;
+    font-size: 2rem;
+  }
+
+  .text p {
+    color: bisque;
+  }
+
+  .text a {
+    display: none;
+  }
+  .contact-form {
+    display: none;
+  }
+}
