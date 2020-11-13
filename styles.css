@@ -16,13 +16,6 @@ body {
   width: 100%;
 }
 
-.social-media {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 200px;
-}
-
 nav ul,
 .main-body {
   display: flex;
@@ -88,6 +81,14 @@ li {
 
 .left-side-nav a:hover::before {
   height: 100%;
+}
+
+/* Social Media Icons  */
+.social-media {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 200px;
 }
 
 a {
