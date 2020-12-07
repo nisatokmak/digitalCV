@@ -11,19 +11,22 @@ html {
 body {
   width: 100%;
 }
-.container-body {
-  padding: 0 100px 0 100px;
+.main-body {
+  display: flex;
   width: 100%;
 }
 
 nav ul,
 .main-body {
-  display: flex;
+  /* display: flex; */
   flex-wrap: nowrap;
   justify-content: space-between;
   color: rgb(70, 16, 16);
 }
 
+nav ul {
+  display: flex;
+}
 body {
   background-color: beige;
 }
@@ -31,7 +34,7 @@ body {
 header {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 40px 0;
 }
 
@@ -107,8 +110,6 @@ a {
 
 .text {
   margin-top: 200px;
-
-  margin-left: 50px;
 }
 
 .text h1 {
@@ -119,6 +120,7 @@ a {
 
 .text span {
   display: inline-block;
+  font-size: 5vw;
 }
 
 span:hover {
@@ -200,6 +202,9 @@ span.left-side {
   opacity: 1;
 }
 
+#contact {
+  width: 80vh;
+}
 .contact-form h1 {
   margin-top: 200px;
   text-align: center;
@@ -209,10 +214,18 @@ span.left-side {
   font-weight: 400;
 }
 
+form {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
 form input,
 form textarea {
-  display: block;
-  width: 500px;
+  vertical-align: middle;
+
+  position: relative;
+  /* display: block; */
+  width: 100%;
   padding: 20px;
   background-color: rgb(247, 236, 236);
   border: 3px solid rgb(104, 43, 78);
@@ -220,9 +233,8 @@ form textarea {
   outline: none;
   font-size: 1, 2rem;
   color: rgb(108, 109, 101);
-  position: relative;
   left: 50%;
-  right: 50%;
+  /* right: 50%; */
   transform: translateX(-50%);
 }
 
@@ -230,4 +242,49 @@ form input:last-child {
   width: 150px;
   background-color: rgb(247, 236, 236);
   cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+  .slideshow-container {
+    display: none !important;
+  }
+
+  .text h1,
+  p,
+  span {
+    font-size: 7vw !important;
+  }
+
+  .left-side-nav {
+    padding: 2vh 2vh 2vh 2vh;
+  }
+  .text {
+    margin-top: 35px !important;
+  }
+
+  .text a {
+    margin-left: 15vh;
+  }
+  .contact-form h1 {
+    margin-top: 0;
+  }
+
+  .main-body {
+    height: calc(75vh - 81.6px);
+  }
+
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  form input {
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 583px) {
+  .contact-form {
+    display: none;
+  }
 }
